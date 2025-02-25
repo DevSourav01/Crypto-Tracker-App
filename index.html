@@ -3,10 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crypto Tracker App</title>
-    <link rel="stylesheet" href="/index.css" />
+    <title>Cryptocurrency Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <!--navigations Bar -->
+    <nav class="nav-bar">
+      <div class="outer-navbar">
+        <div class="left-nav">
+          <a href="/index.html"><h1>Crypto Tracker</h1></a>
+        </div>
+        <div class="right-nav">
+          <button>Home</button>
+          <button>Liked</button>
+          <button>Coins</button>
+          <input type="text" class="input-search" placeholder="Search Coins... " />
+        </div>
+      </div>
+    </nav>
+    <!--item table -->
+    <main>
+      <table class="table-container">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>
+              Price
+              <i class="ri-arrow-up-line"></i>
+              <i class="ri-arrow-down-line"></i>
+            </th>
+            <th>
+              Volume
+              <i class="ri-arrow-up-line"></i>
+              <i class="ri-arrow-down-line"></i>
+            </th>
+            <th>
+              Market Cap
+              <i class="ri-arrow-up-line"></i>
+              <i class="ri-arrow-down-line"></i>
+            </th>
+            <th>Favorite</th>
+          </tr>
+        </thead>
+        <tbody class="coin-body">
+          <!-- <tr>
+            <td>1</td>
+            <td></td>
+            <td>Bitcoin</td>
+            <td>$45,000</td>
+            <td>$30B</td>
+            <td>$850B</td>
+            <td><button>⭐</button></td>
+          </tr> -->
+
+          <!-- Data will be added through api call-->
+        </tbody>
+      </table>
+    </main>
+    <!--prev-next button -->
+    <div class="prev-next">
+      <button class="prev-button" disabled>Prev</button>
+      <button class="next-button">Next</button>
+    </div>
+    <!--loading or shimmer effect -->
+    <div class="shimmer"></div>
+
     <script src="/index.js"></script>
   </body>
 </html>
