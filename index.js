@@ -63,4 +63,7 @@ prevBtn.addEventListener("click", () => {
 });
 
 // Fetch Data on Page Load
-fetchCoin();
+document.addEventListener("DOMContentLoaded", () => {
+    fetchCoin();
+  });
+
