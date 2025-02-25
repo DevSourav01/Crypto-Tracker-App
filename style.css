@@ -132,3 +132,18 @@ td button:hover {
   border: none;
   cursor: pointer;
 }
+
+
+.shimmer {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ccc, #ddd, #ccc);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  margin-top: 20px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
