@@ -1,7 +1,8 @@
-// Function to get coinId from URL
 function getCoinIdFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("coinId"); // No default "bitcoin" here, let it load correctly
+  const coinId = urlParams.get("coinId"); // Should return the coinId from URL
+  console.log("Extracted Coin ID from URL:", coinId); // Debugging log
+  return coinId;
 }
 
 // Fetch and display the crypto details
@@ -13,6 +14,7 @@ async function fetchCryptoDetails(coinId) {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}`
     );
     const data = await response.json();
+    console.log("API Response Data:", data); // Check if correct data is received
 
     if (data.length > 0) {
       updateCryptoDetails(data[0]); // Update UI with coin data
@@ -26,6 +28,7 @@ async function fetchCryptoDetails(coinId) {
 
 // Update UI with fetched coin data
 function updateCryptoDetails(coin) {
+  console.log("Updating UI with:", coin); // Debugging log
   document.querySelector(".image-title img").src = coin.image;
   document.querySelector(".image-title img").alt = coin.name;
   document.querySelector(".crypto-title").textContent = coin.name;
