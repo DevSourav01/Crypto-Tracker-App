@@ -18,6 +18,7 @@ async function fetchCryptoDetails(coinId) {
 
     if (data.length > 0) {
       updateCryptoDetails(data[0]); // Update UI with coin data
+  
     } else {
       console.error("No data found for the specified coin.");
     }
