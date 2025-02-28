@@ -1,0 +1,11 @@
+/* table css*/
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 70px;
+  font-family: Arial, sans-serif;
+
+  color: rgb(36, 143, 33);
+  border-radius: 8px;
+  overflow: hidden;
+}

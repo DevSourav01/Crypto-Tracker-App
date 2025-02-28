@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptocurrency Dashboard</title>
+    <link rel="stylesheet" href="/crypto-details.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <!--navigations Bar -->
+    <nav class="nav-bar">
+      <div class="outer-navbar">
+        <div class="left-nav">
+          <a href="/index.html"><h1>Crypto Tracker</h1></a>
+        </div>
+        <div class="right-nav">
+          <button>Home</button>
+          <button>Liked Coins</button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Search Coins... "
+          />
+          <div id="searchResults" class="search-results"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="crypto-detail-container">
+      <div class="main-outer-div-sidebar">
+        <div class="left-div">
+          <div class="image-title">
+            <img src="" alt="" />
+            <h1 class="crypto-title">Bitcoin</h1>
+          </div>
+          <div class="rank-price-market">
+            <div>
+              <span>Rank:</span>
+              <span class="rank">1</span>
+            </div>
+            <div>
+              <span>Price:</span>
+              <span class="price">$50.01</span>
+            </div>
+            <div>
+              <span>Market Cap:</span>
+              <span class="market-cap">$1458854</span>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button class="add-to-favourite">Add To Favourite</button>
+          </div>
+        </div>
+        <div class="right-div">
+          <div class="button-div">
+            <button class="time-range-btn" data-range="1">24h</button>
+            <button class="time-range-btn" data-range="3">3d</button>
+            <button class="time-range-btn" data-range="90">3m</button>
+            
+          </div>
+          <canvas class="coin-chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="/crypto-details.js"></script>
+  </body>
+</html>

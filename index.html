@@ -12,9 +12,12 @@
       referrerpolicy="no-referrer"
     />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -26,9 +29,13 @@
         </div>
         <div class="right-nav">
           <button>Home</button>
-          <button>Liked</button>
-          <button>Coins</button>
-          <input type="text" class="input-search" placeholder="Search Coins... " />
+          <button>Liked Coins</button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Search Coins... "
+          />
+          <div id="searchResults" class="search-results"></div>
         </div>
       </div>
     </nav>
@@ -42,33 +49,23 @@
             <th>Name</th>
             <th>
               Price
-              <i class="ri-arrow-up-line"></i>
-              <i class="ri-arrow-down-line"></i>
+              <i class="ri-arrow-up-line" id="sort-up-price"></i>
+              <i class="ri-arrow-down-line" id="sort-down-price"></i>
             </th>
             <th>
               Volume
-              <i class="ri-arrow-up-line"></i>
-              <i class="ri-arrow-down-line"></i>
+              <i class="ri-arrow-up-line" id="sort-up-volumn"></i>
+              <i class="ri-arrow-down-line" id="sort-down-volumn"></i>
             </th>
             <th>
               Market Cap
-              <i class="ri-arrow-up-line"></i>
-              <i class="ri-arrow-down-line"></i>
+              <i class="ri-arrow-up-line" id="sort-up-market"></i>
+              <i class="ri-arrow-down-line" id="sort-down-market"></i>
             </th>
             <th>Favorite</th>
           </tr>
         </thead>
         <tbody class="coin-body">
-          <!-- <tr>
-            <td>1</td>
-            <td></td>
-            <td>Bitcoin</td>
-            <td>$45,000</td>
-            <td>$30B</td>
-            <td>$850B</td>
-            <td><button>⭐</button></td>
-          </tr> -->
-
           <!-- Data will be added through api call-->
         </tbody>
       </table>
